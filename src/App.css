@@ -4,9 +4,33 @@
 
 .Contents__List {
   display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
-.Contents__List li {
-  margin: 10px;
+.Contents__List button {
+  border: none;
+  background-color: #6d3188;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bolder;
 }
 
+.header__Logo {
+  width: 130px;
+  height: 50px;
+}
+
+.Chart__Home__Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Album__Image {
+  width: 247px;
+  height: 247px;
+  margin-right: 40px;
+}
