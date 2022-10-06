@@ -1,4 +1,4 @@
 
 export default function Login() {
-  return <button>하이</button>
+  return <button>하이 안녕</button>
 }
