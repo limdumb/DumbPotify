@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const MainHeader = styled.header `
-  display: flex;
-  height: 50px;
-`
+import Header from "../Component/Header";
+import ChartList from "../Component/ChartList";
+import Footer from "../Component/Footer";
+import CategoryTab from "../Component/CategoryTab";
 
 const ChartSection = styled.section `
   display: flex;
@@ -11,21 +11,15 @@ const ChartSection = styled.section `
   flex-direction: column;
   border-left: none;
   border-right: none;
-  margin-top: 10px;
   border-top: none;
   height: 80%;
+  background-color: rgb(251, 249, 252);
 `
 
 const Information = styled.section `
   border: none;
   background-color: #6d3188;
   padding: 80px 40px;
-`
-
-const Footer = styled.footer `
-  background-color: black;
-  color: white;
-  height: 11%;
 `
 
 const Container = styled.div `
@@ -38,43 +32,32 @@ const HomeChartInfo = styled.div `
   flex-direction: column;
 `
 
-
+//현재 활성화된 탭이 어떤것인지 저장해야 할 꺼고
+// 활성화된 탭이 아닌 탭은 노출안되게 처리해줘야지
 export default function MainPage() {
+  
+
   return(
     <Container>
-        <MainHeader>
-          <div className="Chart__Home__Header">
-            <a href="/">
-             <img className="header__Logo" src={process.env.PUBLIC_URL + '/logoimage/dumpotify.png'}/>
-            </a>
-          </div>
-        </MainHeader>
+      <Header></Header>
         <Information>
           <HomeChartInfo>
             <h3>Here's a sample of what's moving fans this week.</h3>
-              <ul className="Contents__List">
-                <li><button>Songs</button></li>
-                <li><button>Album</button></li>
-                <li><button>Artist</button></li>
-              </ul>
+              <CategoryTab></CategoryTab>
             <div style={{
               display:'flex'
             }}>
               <img className="Album__Image" src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/07/25/114635657.2.jpg"/>
-              <h3>내용</h3>
+              <h3>지금은 소녀시대 앞으로도 소녀시대 영원히 소녀시대</h3>
             </div>
           </HomeChartInfo>
         </Information>
         <ChartSection>
           <span>Weekly Top Songs Global</span>
           <h3>Friday, September 23 - Thursday, September 29, 2022</h3>
-          <ul>
-            <li>안녕</li>
-            <li>나는</li>
-            <li>경인</li>
-          </ul>
+          <ChartList></ChartList>
         </ChartSection>
-        <Footer>ㅇㅇ</Footer>
+        <Footer></Footer>
     </Container>
   )
 }
