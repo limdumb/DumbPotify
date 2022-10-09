@@ -19,14 +19,9 @@
 }
 
 .header__Logo {
-  width: 130px;
-  height: 50px;
-}
-
-.Chart__Home__Header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 3px;
+  width: 150px;
+  height: 70px;
 }
 
 .Album__Image {
